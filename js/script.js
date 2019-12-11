@@ -15,7 +15,11 @@ var temp = 1;
 
    var guess = document.forms[0].elements.guessHere.value;
 
-
+   if (Number.isInteger(guess)){
+     console.log(guess);
+   } else{
+     result.innerHTML = "Enter an Integer!";
+   }
 
    if(guess == answer){
       result.innerHTML = "YOU'RE A WINNER! YOU GUESSED IT RIGHT IN " + guess + " tries";
@@ -46,9 +50,5 @@ var temp = 1;
    if(guesses.length == 99){
      result.innerHTML = guesses + "<br>" + "This is your last try, you will get it this time!";
    }
-   if (Number.isInteger(guess)){
-     console.log(guess);
-   } else{
-     result.innerHTML = "Enter an Integer!";
-   }
+
  }
