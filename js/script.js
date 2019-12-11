@@ -46,5 +46,9 @@ var temp = 1;
    if(guesses.length == 99){
      result.innerHTML = guesses + "<br>" + "This is your last try, you will get it this time!";
    }
-
+   if (Number.isInteger(guess)){
+     console.log(guess);
+   } else{
+     result.innerHTML = "Enter an Integer!";
+   }
  }
