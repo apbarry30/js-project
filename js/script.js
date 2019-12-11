@@ -9,39 +9,42 @@ var answer = Math.floor(Math.random()*100 + 1);
 console.log(numbers);
 var guesses = [];
 var temp = 1;
+// var guessField = document.getElementsByClassName('guessField');
 
   document.getElementById("submitguess").onclick = function(){
 
-   // number guessed by user
    var guess = document.forms[0].elements.guessHere.value;
 
-   // if (Math.abs(guess - answer) <10){
-   //   result = document.getElementById("result");
-   //   result.innerHTML = "YOU'RE Getting CLOSE";
-   // }
+
 
    if(guess == answer){
-      result.innerHTML = "YOU'RE A WINNER! YOU GUESSED IT RIGHT IN" + guess + "tries";
+      result.innerHTML = "YOU'RE A WINNER! YOU GUESSED IT RIGHT IN " + guess + " tries";
    }
 
-    else if(Math.abs(answer - guess) <10){
+    else if(Math.abs(answer - guess) <20){
       guesses.push(guess);
       guess++;
-      result.innerHTML = guesses + "<br>" + "KINDA HOT";
+      result.innerHTML = guesses + "<br>" + "HOT! You are getting close!";
+
+
 
    }
    else
    {
       guesses.push(guess);
        guess++;
-       result.innerHTML ="TRY ANOTHER NUMBER";
+       result.innerHTML =guesses + "<br>" + "You are not close! TRY ANOTHER NUMBER";
+       // guess.innerHTML = " ";
    }
    if(guesses.length == 10){
-     result.innerHTML = "You've already guessed 10 times. Come on!";
+     result.innerHTML = guesses + "<br>" +"You've already guessed 10 times. Come on!";
      console.log(temp);
    }
    if(guesses.length == 50){
-     result.innerHTML = "You've already guessed 50 time! Will you ever get it!?!";
+     result.innerHTML = guesses + "<br>" + "You've already guessed 50 time! Will you ever get it!?!";
+   }
+   if(guesses.length == 99){
+     result.innerHTML = guesses + "<br>" + "This is your last try, you will get it this time!";
    }
 
  }
