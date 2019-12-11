@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Guessing Game</title>
+  </head>
+  <body>
+    <h1>Guessing Game</h1>
+    <div class="form">
+      <form class="guessHere" action="index.html" method="post">
+        <label for="guessField">Choose a Number Between 1 and 100</label>
+        <br>
+        <input type = "text" id = "userGuess" name="guessHere" class = "guessField" placeholder="ex: 1"/>
+        <input type = "button" value = "submit" class = "guessSubmit" id = "submitguess" onclick="addTo()"/>
+      </form>
+    </div>
+    <h2>Your Guesses</h2>
+    <div id="result"></div>
+  </body>
+  <script type="text/javascript" src="js/script.js"></script>
+</html>
