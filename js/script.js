@@ -22,7 +22,7 @@ var temp = 1;
    }
 
    if(guess == answer){
-      result.innerHTML = "YOU'RE A WINNER! YOU GUESSED IT RIGHT IN " + guess + " tries";
+      result.innerHTML = "YOU'RE A WINNER! YOU GUESSED IT RIGHT IN " + guesses.length + " tries";
    }
 
     else if(Math.abs(answer - guess) <20){
