@@ -70,7 +70,7 @@ document.getElementById("submitguess").onclick=function ceck(){
    //   int.innerHTML = " integer";
    // }else{
    //   int.innerHTML = "please enter an integer";
-   }
+   //}
 
 }
 
